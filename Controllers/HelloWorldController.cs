@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace APIs_.NET.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("[api/controller]")]
     public class HelloWorldController:ControllerBase
     {
             private readonly ILogger<WeatherForecastController> _logger;
