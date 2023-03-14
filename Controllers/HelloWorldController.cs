@@ -11,14 +11,18 @@ namespace APIs_.NET.Controllers
     [Route("[controller]")]
     public class HelloWorldController:ControllerBase
     {
+            private readonly ILogger<WeatherForecastController> _logger;
+
         IHelloWorldService helloWorldService;
 
-        public HelloWorldController(IHelloWorldService helloWorld){
+        public HelloWorldController(IHelloWorldService helloWorld, ILogger<WeatherForecastController> logger){
+            _logger = logger;
             helloWorldService = helloWorld;
         }    
 
-
+    [HttpGet()]
         public IActionResult Get(){
+            _logger.LogInformation("Se retorna el mensaje hola mundo");
             return Ok(helloWorldService.GetHelloWorld());
         }
     }
