@@ -11,7 +11,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 //builder.Services.AddScoped<IHelloWorldService, HelloworldService>();
 
-//builder.Services.AddScoped(p=> new HelloWorldService());
+//builder.Services.AddScoped<IHelloWorldService>(p=> new HelloWorldService());
 
 var app = builder.Build();
 
