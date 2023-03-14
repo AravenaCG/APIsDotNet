@@ -23,9 +23,9 @@ namespace Entity_Framework_Platzi.Models
         public string Descripcion { get; set; }
         public Prioridad PrioridadTarea { get; set; }
         public DateTime FechaCreacion { get; set; }
+        
         [NotMapped]
         [JsonIgnore]
-
         public string Resumen { get; set; }
         public virtual Categoria Categoria { get; set; }
     }

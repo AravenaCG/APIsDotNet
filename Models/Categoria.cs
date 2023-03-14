@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 namespace Entity_Framework_Platzi.Models
 {
@@ -19,6 +20,7 @@ namespace Entity_Framework_Platzi.Models
 
         public string Descripcion { get; set; }
         [JsonIgnore]
+        [ValidateNever]
         public virtual ICollection<Tarea>  Tareas { get; set; }
 
         public int Peso { get; set; }

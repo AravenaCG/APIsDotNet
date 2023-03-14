@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace APIs_.NET.Controllers
 {
     [ApiController]
-    [Route("[api/controller]")]
+    [Route("api/[controller]")]
     public class TareasController : ControllerBase
     {
         private readonly ILogger<TareasController> _logger;
